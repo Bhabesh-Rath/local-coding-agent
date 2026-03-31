@@ -36,3 +36,10 @@ This process ensures that the quality of the synthetic data used to train the mo
   *  Disadvantages: The low parameter count means reduced logic depth. It has been shown that these models often use distributed reasoning which can increase the number of failure modes. There is also the chance of long-context drift and issues with adherance to complex constraints and nuances. It would also be relatively rigid compared to bigger models.
 
 The model being SOTA and relatively high performing makes it a good candidate for the student model application. As things stand, I am actively looking for a workaround to deal with these disadvantages.
+
+## Open Decision: 
+
+### KV Cache Compression Strategy:
+
+**Status:** Under evaluation
+TurboQuant (Google Research, ICLR 2026) - promising 6x KV cache compression with no retraining required. Official implementation pending (expected Q2 2026). Community implementations show QJL stage underperforms in practice due to softmax variance amplification. Monitoring for stable implementation before adoption.
